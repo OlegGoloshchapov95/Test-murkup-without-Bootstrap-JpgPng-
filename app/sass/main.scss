@@ -54,11 +54,13 @@ table {
     display: table;
     clear: both;
 }
+*{
+	box-sizing:border-box;
+}
 body{
 	 font-family:'open_sansregular', sans-serif;
 	 color:#000000;
-	 background-color:#fff;
-	 box-sizing:border-box; 
+	 background-color:#fff; 
 } 
 .main-wrap{
 	 min-width:320px; 
@@ -68,11 +70,11 @@ body{
 	 margin-right:auto;
 	 margin-left:auto;
 	 padding-left:10px;
-	 padding-right:10px;  
+	 padding-right:10px;   
 }
+$lines_color:#eae3e3; 
 .header-block{
 	$font_size:12px;
-	$lines_color:#eae3e3; 
 	font-size:font_size;
 	.top-line{
 		padding:7px 10px;
@@ -224,6 +226,62 @@ body{
         }
 	}
 } 
+.main-block{
+	display:block;/*for EE*/ 
+	background-image:url(../img/big-background.jpg);
+	background-repeat:no-repeat;
+	background-size:auto 395px;
+	background-position:50% 0; 
+	padding-left:10px;
+	padding-right:10px; 
+	padding-top:39px;
+	.main-h{
+		color:#fff; 
+        font-size: 70px;
+        text-transform: uppercase;
+        font-family: 'open_sansbold';
+        margin-bottom:16px;
+	} 
+	.main-h-descr{
+		font-size:20px;
+		color:#fff; 
+		margin-bottom:80px;
+		opacity:0.8; 
+	}
+	.tab-headers{
+		display:flex;
+		flex-wrap:wrap; 
+		padding-left:0px;
+		padding-right:0px;  
+		li{
+		   width:33.3333%;
+		   background-color:#040404;  
+		   border-right:1px solid #3d3d3d;
+		   opacity:0.6;
+		   text-align:center;  
+		   padding-top:23px;
+		   padding-bottom:23px;
+		   &:last-child{
+		   	border-right:none; 
+		   }
+		   a{ 
+		   	font-size:17px;
+		   	display:inline-block; 
+		   	color:#fff; 
+		   	text-transform:uppercase;
+		   	font-family: 'open_sansextrabold';
+		   } 
+		   &.active-tab{
+		   	background-color:#fff; 
+		   	opacity:1;
+		   	border-bottom:1px solid $lines_color; 	   	
+			   a{
+			   	  color:#de1f24; 
+			    }
+		   }
+	    }
+	} 
+}
 .h-in-section{
 	font-size:27px;
 	font-family: 'open_sansbold';
@@ -234,6 +292,9 @@ body{
 }
 
 .most-recent-cars{
+	.container{
+		background-color:#fff; 
+	}
 	.cars-items-container{	
 		display:flex;
 		flex-wrap:wrap; 
@@ -341,6 +402,8 @@ body{
 	}
 }
 .footer-block{
+	padding-left:10px;
+	padding-right:10px;
 	background-color:#2b2b2b;
 	color:#fff;
 	font-size:15px;
@@ -426,6 +489,11 @@ body{
 }
 
 @media (max-width: 992px){
+	.main-block{
+		.main-h{
+	        font-size: 50px;
+		} 
+    }
 	.most-recent-cars{
 		.cars-items-container{	
 		    .cars-item{
@@ -443,6 +511,11 @@ body{
         	    margin-bottom:15px;
             }
 	    }
+    }
+    .main-block{
+		.main-h{
+	        font-size: 40px;
+		} 
     }
 }
 @media (max-width: 600px){
@@ -506,8 +579,14 @@ body{
 			margin-bottom:30px; 
 		}
 		.social-block{
-			float:none;   
+			float:none;
+            .social-icons{
+		        &>li{
+		        	margin-right:8px;
+		        }
+            } 
 		}
 	}
 }
 
+       		
