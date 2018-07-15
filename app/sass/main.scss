@@ -64,6 +64,7 @@ body{
 } 
 .main-wrap{
 	 min-width:320px; 
+	 overflow:hidden;
 }
 .container{
 	 max-width:1110px;
@@ -290,11 +291,47 @@ $lines_color:#eae3e3;
 		color:#de1f24; 
 	}
 }
-
-.most-recent-cars{
+.content-tab{
 	.container{
 		background-color:#fff; 
 	}
+}
+.top-make{
+	.cars-types-container{
+		margin-bottom:100px;
+	}
+	.banner{
+		display:block;
+		margin:0 auto; 
+		max-width:729px;
+		width:90%; 
+	}
+}
+.top-make,.type{
+	padding-bottom:80px; 
+	.cars-types-container{
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:space-around;
+		.car-type-item{
+            width:114px;
+            text-align:center; 
+            margin-left:5px;
+            margin-right:5px;
+            img{
+            	display:inline-block; 
+            	width:112px;
+            	margin-bottom:35px; 
+            } 
+            span{
+            	color:#0d8ae4;
+            	font-size:16px;
+            	line-height:1.5;  
+            }    
+		}   
+	}
+}
+.most-recent-cars{
 	.cars-items-container{	
 		display:flex;
 		flex-wrap:wrap; 
