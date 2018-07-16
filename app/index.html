@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Тестовое без Бутстрапа</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="css/main.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>     
       <div id="wrapper" class="main-wrap">
@@ -60,6 +69,49 @@
               <li class="tab-3"><a href="#">trucks</a></li>
            </ul> 
            <div id="content-tab-1" class="content-tab"> 
+             <div class="block-car-whith-settings container">
+                 <div class="column-1">
+                     <div class="two-dropdowns">
+                         <div class="column">
+                             <div class="dropdown">
+                                <h6 class="inscription">
+                                   make
+                                </h6>
+                                <a href="#">All Makes<span class="caret"></span></a>
+                             </div>
+                         </div> 
+                         <div class="column">
+                              <div class="dropdown frozen-drpdn">
+                                <h6 class="inscription">
+                                   model
+                                </h6>
+                                <a href="#">Select make first<span class="caret"></span></a>
+                             </div>
+                         </div> 
+                     </div>
+                     <div class="range-picker">
+                     </div>
+                 </div>
+                 <div class="column-2">
+                     <div class="dropdown">
+                          <h6 class="inscription">
+                               city
+                          </h6>
+                          <a href="#">All Cities<span class="caret"></span></a>
+                      </div>
+                      <div class="dropdown">
+                          <h6 class="inscription">
+                               condition
+                          </h6>
+                          <a href="#">Used<span class="caret"></span></a>
+                      </div>
+                 </div>
+                 <div class="column-3">
+                     <div class="number-of-offers">
+                        <span>1,320,048 offers</span>
+                     </div> 
+                 </div>
+             </div>  
              <section class="top-make container">  
                 <h2 class="h-in-section">Top Make</h2>
                 <div class="cars-types-container">
@@ -461,6 +513,8 @@
             </div>  
           </div> 
         </footer>  
-      </div>  
+      </div>
+      <script src="js/main.js">
+      </script>  
   </body>
 </html>

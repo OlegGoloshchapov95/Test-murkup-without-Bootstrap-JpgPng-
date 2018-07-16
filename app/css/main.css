@@ -348,6 +348,119 @@ body {
   background-color: #fff;
 }
 
+.block-car-whith-settings {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.block-car-whith-settings .inscription {
+  color: #a5a5a5;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: 'open_sansextrabold';
+  margin-bottom: 8px;
+}
+
+.block-car-whith-settings .dropdown.frozen-drpdn {
+  opacity: 0.5;
+}
+
+.block-car-whith-settings .dropdown a {
+  font-size: 20px;
+  font-family: 'open_sansbold';
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.block-car-whith-settings .dropdown a .caret {
+  display: inline-block;
+  width: 8px;
+  height: 5px;
+  background-image: url("../img/dropdown-arrow.png");
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 28px;
+  top: 2px;
+}
+
+.block-car-whith-settings .column-1 {
+  width: 521px;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.block-car-whith-settings .column-1 .two-dropdowns {
+  margin-bottom: 50px;
+  display: table;
+  width: 100%;
+}
+
+.block-car-whith-settings .column-1 .two-dropdowns .column {
+  display: table-cell;
+  width: 50%;
+}
+
+.block-car-whith-settings .column-1 .range-picker {
+  position: relative;
+  max-width: 460px;
+  width: 100%;
+  height: 2px;
+  background-color: #d8d8d8;
+}
+
+.block-car-whith-settings .column-1 .range-picker .box {
+  cursor: pointer;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 8px solid #dd2026;
+  background-color: #fffffd;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  top: -9px;
+  left: -1px;
+}
+
+.block-car-whith-settings .column-2 {
+  width: 200px;
+}
+
+.block-car-whith-settings .column-2 .dropdown:first-child {
+  margin-bottom: 80px;
+}
+
+.block-car-whith-settings .column-3 {
+  width: 270px;
+}
+
+.block-car-whith-settings .column-3 .number-of-offers {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  background-color: #de1f26;
+  padding: 20px 0;
+  font-family: 'open_sansbold';
+  -webkit-border-radius: 15%/50%;
+          border-radius: 15%/50%;
+  max-width: 273px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .top-make .cars-types-container {
   margin-bottom: 100px;
 }
@@ -650,12 +763,27 @@ body {
           background-size: auto 45%;
 }
 
+@media (max-width: 1048px) {
+  .block-car-whith-settings .column-1 {
+    width: 100%;
+  }
+  .block-car-whith-settings .column-2 {
+    width: 50%;
+  }
+  .block-car-whith-settings .column-3 {
+    width: 50%;
+  }
+}
+
 @media (max-width: 992px) {
   .main-block .main-h {
     font-size: 50px;
   }
   .most-recent-cars .cars-items-container .cars-item {
     width: 31%;
+  }
+  .block-car-whith-settings .column-2 .dropdown:first-child {
+    margin-bottom: 30px;
   }
 }
 
@@ -706,6 +834,34 @@ body {
   .header-block .main-header .actions-menu li:nth-child(1) {
     margin-right: 10px;
   }
+  .block-car-whith-settings .column-1 {
+    margin-bottom: 30px;
+  }
+  .block-car-whith-settings .column-1 .two-dropdowns .column {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .block-car-whith-settings .column-1 .two-dropdowns .column:first-child {
+    margin-bottom: 30px;
+  }
+  .block-car-whith-settings .column-2 {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  .block-car-whith-settings .column-2 .dropdown:first-child {
+    margin-bottom: 30px;
+  }
+  .block-car-whith-settings .column-3 {
+    display: block;
+    width: 70%;
+  }
   .most-recent-cars .cars-items-container .cars-item {
     width: 48%;
   }
@@ -725,6 +881,6 @@ body {
     float: none;
   }
   .footer-block .social-block .social-icons > li {
-    margin-right: 8px;
+    margin-right: 5px;
   }
 }
