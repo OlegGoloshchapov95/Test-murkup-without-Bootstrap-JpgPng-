@@ -32,7 +32,7 @@
    }     
      
    var left = e.pageX - thisDiv.offsetWidth / 2 - rangePickerPosition.left;
-   if(left>=0 && left<=rangePicker.offsetWidth+1){
+   if(left>=0 && left<=rangePicker.offsetWidth+1 && newRelPos==relativePos){
      thisDiv.style.left = left+"px";
    }    
    /*if((e.pageX>rangePickerPosition.left)&&(e.pageX<rangePickerPosition.right)&&(newRelPos==relativePos)) { 
