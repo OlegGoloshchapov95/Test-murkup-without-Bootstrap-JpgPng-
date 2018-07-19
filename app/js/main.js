@@ -33,7 +33,7 @@
      
    var left = e.pageX - thisDiv.offsetWidth / 2 - rangePickerPosition.left;
    if(left>=0 && left<=rangePicker.offsetWidth+1 && newRelPos==relativePos){
-     thisDiv.style.left = left+"px";
+     thisDiv.style.left = (left-10)+"px";
    }    
    /*if((e.pageX>rangePickerPosition.left)&&(e.pageX<rangePickerPosition.right)&&(newRelPos==relativePos)) { 
         thisDiv.style.left = e.pageX - thisDiv.offsetWidth / 2 - rangePickerPosition.left + 'px';
@@ -47,8 +47,8 @@
    var width = parseInt(rangePicker.offsetWidth);
    var startPr = 1500;
    var endPr = 50000000;
-   prFrom.innerHTML = value(parseInt(div1.style.left));
-   prTo.innerHTML = value(parseInt(div2.style.left));
+   prFrom.innerHTML = value(parseInt(div1.style.left)+10);
+   prTo.innerHTML = value(parseInt(div2.style.left)+10);
    function value(elLeft){
      return toCommaSeparatedString(Math.ceil((endPr-startPr)*(elLeft/width)+startPr));
    }
