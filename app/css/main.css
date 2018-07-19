@@ -427,9 +427,17 @@ body {
   left: 1px;
   bottom: 24px;
   margin-bottom: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .block-car-whith-settings .column-1 .range-picker .priseFromTo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
   bottom: 24px;
   right: 1px;
@@ -452,6 +460,10 @@ body {
   color: #a5a5a5;
   font-size: 9px;
   top: 19px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .block-car-whith-settings .column-1 .range-picker .stars-price {
@@ -518,6 +530,10 @@ body {
   margin: 0 auto;
   max-width: 729px;
   width: 90%;
+}
+
+.top-make .banner img {
+  width: 100%;
 }
 
 .top-make, .type {

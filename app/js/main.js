@@ -39,7 +39,7 @@
         thisDiv.style.left = e.pageX - thisDiv.offsetWidth / 2 - rangePickerPosition.left + 'px';
      }*/
    posBridge();
-   priceValues();  
+   priceValues();
  }  
  function priceValues(){
    var prFrom = rangePicker.querySelector('#from');
@@ -76,15 +76,12 @@
     } 
  };          
  div1.onmousedown = function(e){
-     moveAt(e,div1,div2);
-                 
+     moveAt(e,div1,div2);          
      document.onmousemove = function(e){
         moveAt(e,div1,div2); 
-
      } 
      document.onmouseup = function(){
         document.onmousemove = null;
-      
      }  
  } 
  div2.onmousedown = function(e){

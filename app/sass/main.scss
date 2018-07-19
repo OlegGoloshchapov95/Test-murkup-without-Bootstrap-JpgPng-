@@ -358,8 +358,10 @@ $lines_color:#eae3e3;
         		left:1px;
         		bottom:24px;
         		margin-bottom:0;
+        		user-select:none;
         	}
         	.priseFromTo{
+        		user-select:none;
         		position:absolute;
         		bottom:24px;
         		right:1px; 
@@ -379,6 +381,7 @@ $lines_color:#eae3e3;
         		color:#a5a5a5;	
         		font-size:9px;
         		top:19px;
+        		user-select:none;
             }
             .stars-price{
             	left:1px;
@@ -440,7 +443,10 @@ $lines_color:#eae3e3;
 		display:block;
 		margin:0 auto; 
 		max-width:729px;
-		width:90%; 
+		width:90%;
+		img{
+			width:100%; 
+		} 
 	}
 }
 .top-make,.type{
