@@ -25,19 +25,15 @@
    if(parseInt(thisDiv.style.left)<parseInt(secondDiv.style.left)){
      relativePos = false;
    }   
-   var newPosThis =  e.pageX - thisDiv.offsetWidth / 2 - rangePickerPosition.left;  
-   var newRelPos = true;
-   if(parseInt(newPosThis)<parseInt(secondDiv.style.left)){
-     newRelPos = false;
-   }     
-     
    var left = e.pageX - thisDiv.offsetWidth / 2 - rangePickerPosition.left;
-   if(left>=0 && left<=rangePicker.offsetWidth+1 && newRelPos==relativePos){
-     thisDiv.style.left = (left-10)+"px";
+ 
+   var newRelPos = true;
+   if(left<parseInt(secondDiv.style.left)){
+     newRelPos = false;
    }    
-   /*if((e.pageX>rangePickerPosition.left)&&(e.pageX<rangePickerPosition.right)&&(newRelPos==relativePos)) { 
-        thisDiv.style.left = e.pageX - thisDiv.offsetWidth / 2 - rangePickerPosition.left + 'px';
-     }*/
+   if((left>=0) && (left<=rangePicker.offsetWidth+1) && (newRelPos==relativePos)){
+     thisDiv.style.left = left+"px";
+   }    
    posBridge();
    priceValues();
  }  
@@ -47,8 +43,8 @@
    var width = parseInt(rangePicker.offsetWidth);
    var startPr = 1500;
    var endPr = 50000000;
-   prFrom.innerHTML = value(parseInt(div1.style.left)+10);
-   prTo.innerHTML = value(parseInt(div2.style.left)+10);
+   prFrom.innerHTML = value(parseInt(div1.style.left));
+   prTo.innerHTML = value(parseInt(div2.style.left));
    function value(elLeft){
      return toCommaSeparatedString(Math.ceil((endPr-startPr)*(elLeft/width)+startPr));
    }
